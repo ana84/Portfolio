@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-parametars (14px, 16px, 400);
+    font-family: $lato;
+}
+
+.wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    @include font-parametars (68px, 70px, 400);
+    margin-bottom: 22px;
+    @include bp(mobile) {
+        @include font-parametars (48px, 50px, 400);
+    }
+}
+
+h2 {
+    @include font-parametars (48px, 50px, 700);
+    margin-bottom: 54px;
+    text-align: center;
+    color: $white;
+    @include bp(mobile) {
+        @include font-parametars (40px, 42px, 700);
+    }
+}

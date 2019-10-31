@@ -1,0 +1,44 @@
+.bring-section {
+  background: $red;
+  padding: 100px 0;
+}
+.column-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  flex: 1 1 25%;
+  text-align: center;
+  padding: 15px;
+  h4 {
+    @include font-parametars (24px, 26px, 700);
+    margin-bottom: 22px;
+    color: $white;
+  }
+  p {
+    @include font-parametars (18px, 20px, 400);
+    margin-bottom: 22px;
+    color: $white;
+  }
+  @include bp(tablet) {
+    flex: 1 1 50%;
+  }
+  @include bp(mobile) {
+    flex: 1 1 100%;
+  }
+}
+.service-icon {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 36px;
+  background: $white;
+  color: $grey;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: .4s ease-in-out;
+  &:hover {
+    font-size: 45px;
+  }
+}

@@ -1,0 +1,54 @@
+.social-media {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+	a {
+		flex: 1;
+		margin-right: 20px;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		border-radius: 50%;
+		background: $red;
+		color: $white;
+		display: inline-block;
+		text-align: center;
+		font-size: 36px;
+		transition: .5s ease-in-out;
+		&:hover {
+			font-size: 45px;
+		}
+	}
+	@include bp(mobile) {
+		a {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+		}
+	}
+}
+.details-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 30px;
+	a {
+		@include font-parametars (24px, 30px, 400);
+		color: $grey;
+		text-decoration: none;
+	}
+}
+.footer-bottom {
+	text-align: center;
+	background: $grey;
+	color: $white;
+	padding: 10px;
+	@include font-parametars (24px, 30px, 400);
+	@include bp(mobile) {
+		@include font-parametars (20px, 22px, 400);
+	}
+}

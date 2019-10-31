@@ -1,0 +1,25 @@
+.banner-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/web.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.banner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  text-align: center;
+  h2 {
+    @include font-parametars (28px, 30px, 400);
+    font-style: italic;
+  }
+  @include bp(mobile) {
+    padding-left: 10px;
+    h2 {
+      @include font-parametars (20px, 22px, 400);
+    }
+  }
+}

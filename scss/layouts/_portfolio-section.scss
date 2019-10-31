@@ -1,0 +1,63 @@
+.portfolio-section {
+	padding: 100px 0;
+}
+.text-wrap {
+	h3 {
+		text-align: center;
+		text-transform: uppercase;
+		color: $red;
+		@include font-parametars (28px, 30px, 700);
+		margin-bottom: 54px;
+	}
+	@include bp(mobile){
+		h3,h2 {
+			margin-bottom: 0;
+		}
+	}
+}
+.portfolio-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio-img-wrap {
+	flex: 1 1 50%;
+	padding: 10px 10px;
+	@include bp(mobile) {
+		flex: 1 1 100%;
+	}
+}
+.portfolio-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: $black;
+	img {
+		opacity: .7;
+		transition: transform .5s, opacity .5s;
+	}
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;	
+		.fa-eye {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 2;
+			font-size: 50px;
+			color: $white;
+		}
+	}
+	&:hover img {
+		transform: scale(1.15);
+		opacity: 1;
+	}
+	@include bp(mobile){
+		.fa-eye {
+			font-size: 40px;
+		}
+	}
+}
